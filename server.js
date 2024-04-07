@@ -3,6 +3,8 @@ const app = express();
 const userRouter = require("./routes/userRoutes");
 const menuItemsRouter = require("./routes/menuItemsRoutes");
 const bodyParser = require("body-parser");
+require("dotenv").config();
+const PORT = process.env.PORT || 8080;
 app.use(bodyParser.json());
 const db = require("./db");
 
@@ -11,7 +13,7 @@ app.get("/", (req, res) => {
   console.log("get method");
 });
 
-app.listen(8080, () => {
+app.listen(PORT, () => {
   console.log("Server listen on port no 8080");
 });
 
