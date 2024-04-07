@@ -1,0 +1,4 @@
+# git ignore node_module folder
+node_modules/
+
+# other entries
